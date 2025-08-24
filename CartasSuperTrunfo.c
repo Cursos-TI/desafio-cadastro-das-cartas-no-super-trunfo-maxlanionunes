@@ -19,46 +19,86 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    char estado;
-    char codigo_da_carta[3];
-    char nome_cidade[30];
-    int populacao;
-    float area_km2;
-    float pib;
-    int pt_turisticos;
+    char estado[3] = "";
+    char codigodacarta[4] = "";
+    char nomecidade[30] = "";
+    int populacao = 0;
+    float area_km2 = 0.0;
+    float pib = 0.0;
+    int pt_turisticos = 0;
 
-    estado = "";
-    codigo_da_carta = "";
-    nome_cidade = "";
-    populacao = 0;
-    area_km2 = 0.0;
-    pib = 0.0;
-    pt_turisticos = 0;
+    // Limpa a tela
+    system("clear");
 
-    system("cls");
+    printf("Bem vindo ao Super Trunfo \n");
+    printf("\n");
 
-    prinf("Bem vindo ao Super Trunfo \n");
-    print("\n");
-
-    print("Digite os dados da Carta 1 \n");
+    printf("Digite os dados da Carta 1 \n");
     
-    print("Estado: ");
-    scanf("%s", &estado);
+    printf("Estado (sigla, ex: SP): ");
+    scanf("%2s", estado);
 
-    print("Codigo da Carta com 3 caracteres, sendo o primeiro a leitra do Estado: ");
-    scanf("%s", &codigo_da_carta);
+    printf("Codigo da Carta com 3 caracteres, sendo o primeiro a letra do Estado: ");
+    scanf("%3s", codigodacarta);
 
-    print("Nome da Cidade: ");
-    scanf("%s", &nome_cidade);
+    printf("Nome da Cidade: ");
+    scanf("%29s", nomecidade);
 
-    print("Area em Km2: ");
+    printf("Populacao: ");
+    scanf("%d", &populacao);
+
+    printf("Area em Km2: ");
     scanf("%f", &area_km2);
 
-    print("Produto Interno Bruto: ");
+    printf("Produto Interno Bruto: ");
     scanf("%f", &pib);
 
-    print("Produto Interno Bruto: ");
-    scanf("%f", &pt_turisticos);
+    printf("Numero de Pontos Turisticos: ");
+    scanf("%d", &pt_turisticos);
+
+    // Exibe os dados cadastrados
+    printf("\n--- Dados da Carta 01 ---\n");
+    printf("Estado: %s\n", estado);
+    printf("Codigo da Carta: %s\n", codigodacarta);
+    printf("Nome da Cidade: %s\n", nomecidade);
+    printf("Populacao: %d\n", populacao);
+    printf("Area em Km2: %.2f\n", area_km2);
+    printf("Produto Interno Bruto: %.2f\n", pib);
+    printf("Numero de Pontos Turisticos: %d\n", pt_turisticos);
+
+
+    printf("\n Digite os dados da Carta 2 \n");
+    
+    printf("Estado (sigla, ex: SP): ");
+    scanf("%2s", estado);
+
+    printf("Codigo da Carta com 3 caracteres, sendo o primeiro a letra do Estado: ");
+    scanf("%3s", codigodacarta);
+
+    printf("Nome da Cidade: ");
+    scanf("%29s", nomecidade);
+
+    printf("Populacao: ");
+    scanf("%d", &populacao);
+
+    printf("Area em Km2: ");
+    scanf("%f", &area_km2);
+
+    printf("Produto Interno Bruto: ");
+    scanf("%f", &pib);
+
+    printf("Numero de Pontos Turisticos: ");
+    scanf("%d", &pt_turisticos);
+
+    // Exibe os dados cadastrados
+    printf("\n--- Dados da Carta 02 ---\n");
+    printf("Estado: %s\n", estado);
+    printf("Codigo da Carta: %s\n", codigodacarta);
+    printf("Nome da Cidade: %s\n", nomecidade);
+    printf("Populacao: %d\n", populacao);
+    printf("Area em Km2: %.2f\n", area_km2);
+    printf("Produto Interno Bruto: %.2f\n", pib);
+    printf("Numero de Pontos Turisticos: %d\n", pt_turisticos);
 
     return 0;
 }
