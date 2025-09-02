@@ -29,6 +29,9 @@ int main() {
     float densidade_populacional = 0.0;
     float pib_per_capita = 0.0;
 
+    float pib1 = 0.0; 
+    float pib2 = 0.0;
+
     // Limpa a tela
     system("clear");
 
@@ -63,6 +66,10 @@ int main() {
 
     //calcula o PIB per capita da carta 1
     pib_per_capita = pib / populacao;
+
+
+    pib1 = pib;
+    
 
     // Exibe os dados cadastrados
     printf("\n--- Dados da Carta 01 ---\n");
@@ -106,6 +113,7 @@ int main() {
     //calcula o PIB per capita da carta 1
     pib_per_capita = pib / populacao;
 
+    pib2 = pib;
 
     // Exibe os dados cadastrados
     printf("\n--- Dados da Carta 02 ---\n");
@@ -119,5 +127,29 @@ int main() {
     printf("Densidade Populacional (hab/km2): %.2f\n", densidade_populacional);
     printf("PIB per capita: %.2f\n", pib_per_capita);
 
+
+    /*Comparação de cartas (Atributo: Pib):
+    Carta 1 - São Paulo (SP): 500.000.000
+    Carta 2 - Rio de Janeiro (RJ): 800.000.00
+    Resultado: Carta 1 (São Paulo) venceu!*/
+
+    printf("\n--- Comparacao entre as Cartas ---\n");
+    printf("Atributo escolhido: Produto Interno Bruto (PIB)\n");
+    printf("Carta 1 - São Paulo (SP): %.2f\n", pib1);
+    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", pib2);
+
+    if (pib1 > pib2)
+    {
+        printf("Carta 1 (Bauru) venceu!\n");
+    }
+    else if (pib1 < pib2)
+    {
+        printf("Carta 2 (Niteroi) venceu!\n");
+    }
+    else
+    {
+        printf("Empate!\n");
+    }
+    
     return 0;
 }
